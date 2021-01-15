@@ -1,0 +1,7 @@
+---
+# handlers file for ec2-lb
+
+- name: "Restart Service"
+  service: 
+    name: "{{ service_name }}"
+    state: restarted

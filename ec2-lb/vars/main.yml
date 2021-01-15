@@ -1,0 +1,6 @@
+---
+# vars file for ec2-lb
+
+pkg: "haproxy"
+service_name: "haproxy"
+cfg_path: /etc/haproxy/haproxy.cfg

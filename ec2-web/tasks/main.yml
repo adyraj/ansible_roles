@@ -1,0 +1,18 @@
+---
+# tasks file for ec2-web
+
+- name: "Install {{ pkg[0] }} and {{ pkg[1] }}"
+  package:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ pkg }}"
+
+- name: "Copy webpage"
+  copy:
+    src: files/index.php
+    dest: "{{ doc_root }}"
+
+- name: "Start httpd service"
+  service:
+    name: "{{ pkg[0] }}"
+    state: started

@@ -1,0 +1,8 @@
+---
+- hosts: tag_Name_Webserver
+  roles:
+    - ec2-web
+
+- hosts: tag_Name_Loadbalancer
+  roles:
+    - ec2-lb

@@ -1,0 +1,8 @@
+---
+# vars file for ec2-web
+
+pkg:
+  - "httpd"
+  - "php"
+
+doc_root: "/var/www/html"
